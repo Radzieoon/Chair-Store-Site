@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  height: 62px;
+  background-color: black;
+}
+nav {
+  /*padding-top: 18px;*/
+  font-size: 22px;
+  font-weight: 700;
+}
+a.logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 18px;
+}
+.distinctWord {
+  color: #00C3A1;
+  font-weight: 900;
+}
+/*linearGradient: #D2D2D2*/
+.menu {
+  list-style: none;
+  float: right;
+  padding-top: 20px;
+}
+.menuElement {
+  display: inline-block;
+  margin-right: 65px;
+}
+.menuElement:last-child {
+  display: inline-block;
+  margin-right: 0px;
+}
+.menuElement a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
