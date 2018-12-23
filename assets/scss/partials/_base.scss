@@ -1,11 +1,17 @@
 body {
   font-family: "raleway", "Helvetica", "Arial", sans-serif;
+  max-width: 1800px;
+  min-width: 320px;
   width: 100%;
 }
 .container {
-  max-width: 1800px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
   margin: 0 auto;
-  padding-left: 6%;
-  padding-right: 6%;
-  position: relative;
+  max-width: 96vw;
+  @media #{$tablet-up} {
+    max-width: 88vw;
+    justify-content: space-between;
+  }
 }

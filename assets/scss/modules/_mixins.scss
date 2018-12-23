@@ -1,0 +1,11 @@
+@mixin logo($primary-color, $secondary-color) {
+  &.logo {
+    color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    .distinct-word {
+      color: $secondary-color;
+      font-weight: 900;
+    }
+  }
+}
