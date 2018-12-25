@@ -9,3 +9,17 @@
     }
   }
 }
+
+@mixin button($button-1st-color, $button-2nd-color, $size) {
+  background-color: $button-1st-color;
+  border-radius: 10px;
+  color: $button-2nd-color;
+  font-size: $size;
+  padding: 0.9em 2.7em;
+  text-decoration: none;
+  text-transform: uppercase;
+  @media #{$tablet-up} {
+    font-size: $size;
+    padding: 0.55em 1.3em;
+  }
+}
