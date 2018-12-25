@@ -80,31 +80,36 @@ header {
           border-radius: 3px;
           color: $button-secondary-color;
           display: none;
-          left: calc(118px + 8vw);
+          left: calc(10vh + 12vw);
+          //left: calc(118px + 8vw);
           list-style: none;
           position: absolute;
           top: 0;
           //transition: display 1s linear;
           &:before {
             border-color: transparent $button-alternate-color transparent transparent;
-            border-width: 17px;
+            //border-width: 5vh;
+            border-width: 2vh 17px 2vh 17px;
             border-style: solid;
             content: "";
             display: inline-block;
             height: 0;
             left: -34px;
             position: absolute;
-            top: 8px;
+            top: 0.5vh;
+            //top: 8px;
             width: 0;
             @media #{$tablet-up} {
               border-color: transparent transparent $button-alternate-color transparent;
-              left: 48px;
+              border-width: 17px 2vh 17px 2vh;
+              left: 2vw;
+              //left: 48px;
               top: -34px;
             }
           }
           @media #{$tablet-up} {
             left: -1vw;
-            top: 6.5vh;
+            top: 7.3vh;
           }
           li.submenu-element {
             //padding: 0.5vh 2vw;
@@ -134,7 +139,7 @@ header {
       left: 1vw;
     }
     button#menuTrigger.active-trigger {
-      top: 25vh;
+      top: 26vh;
     }
   }
 }
