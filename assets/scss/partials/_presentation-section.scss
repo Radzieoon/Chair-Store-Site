@@ -1,0 +1,52 @@
+#presentationSection {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @media screen and (min-width: 1200px) {
+    height: 50vh;
+  };
+  &>div {
+    //display: flex;
+    //align-items: flex-end;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    border: 0.05em solid $wrap-primary-color;
+    flex: 1 0 0;
+    margin: 1em;
+    //max-width: 460px;
+    min-width: 320px;
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+    p {
+      padding: 0.5em 0.5em 0.5em 1em;
+      @media #{$desktop} {
+        font-size: 1.3em;
+      }
+    }
+  }
+  //div#clairChair {
+  //  background-image: url("../images/box1_img.jpg");
+  //}
+  //div#margaritaChair {
+  //  background-image: url("../images/box2_img.jpg");
+  //}
+  .chairTitle {
+    background-color: $div-title-background;
+    bottom: 1em;
+    opacity: 1;
+    position: absolute;
+    transition: 0.5s opacity linear;
+    width: 100%;
+    h3 {
+      @include title(inherit, $border-primary-color, 1em 50% 1.5em 1em);
+      @media #{$desktop} {
+        font-size: 1.3em;
+        margin-right: 35%;
+      }
+    }
+  }
+}

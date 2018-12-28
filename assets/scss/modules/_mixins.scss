@@ -23,3 +23,9 @@
     padding: 0.55em 1.3em;
   }
 }
+
+@mixin title($title-size, $underline-color, $margin) {
+  border-bottom: 0.5em solid $underline-color;
+  font-size: $title-size;
+  margin: $margin;
+}

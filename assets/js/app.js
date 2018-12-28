@@ -86,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 sliderIndex = sliders.length - 1;
             }
             sliders[sliderIndex].classList.add('visible');
-            sliders[sliderIndex].firstElementChild.style.opacity = 100;
+            sliders[sliderIndex].firstElementChild.style.opacity = 1;
             //---resetting the opacity of the element for mobile media
             if(sliderIndex>=sliders.length-1) {
-                sliders[0].firstElementChild.style.opacity = 100;
+                sliders[0].firstElementChild.style.opacity = 1;
             } else {
-                sliders[sliderIndex+1].firstElementChild.style.opacity = 100;
+                sliders[sliderIndex+1].firstElementChild.style.opacity = 1;
             }
             clearTimeout(slidePrevTimeout);
         }, 500);
@@ -112,15 +112,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 sliderIndex = 0;
             }
             sliders[sliderIndex].classList.add('visible');
-            sliders[sliderIndex].firstElementChild.style.opacity = 100;
+            sliders[sliderIndex].firstElementChild.style.opacity = 1;
             //---resetting the opacity of the element for mobile media
             if(sliderIndex<=0) {
-                sliders[sliders.length-1].firstElementChild.style.opacity = 100;
+                sliders[sliders.length-1].firstElementChild.style.opacity = 1;
             } else {
-                sliders[sliderIndex-1].firstElementChild.style.opacity = 100;
+                sliders[sliderIndex-1].firstElementChild.style.opacity = 1;
             }
             clearTimeout(slideNextTimeout);
         }, 500);
     });
+    /******************************************************************/
+    //---Image title fade
+    //var chairTitle = document.getElementsByClassName('chairTitle');
+    var chairTitle = document.querySelectorAll('.chairTitle');
+    //console.log(chairTitle);
+    chairTitle.forEach(function(element) {
+        element.addEventListener('mouseenter', opacityTurnOff)
+        element.addEventListener('mouseleave', opacityTurnOn)
+    });
+    function opacityTurnOff() {
+        this.style.opacity = 0;
+    }
+    function opacityTurnOn() {
+        this.style.opacity = 1;
+    }
 
 });

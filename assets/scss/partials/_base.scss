@@ -15,3 +15,10 @@ body {
     justify-content: space-between;
   }
 }
+.title {
+  @include title(inherit, $border-primary-color, 1em 55% 1em 1em);
+  @media #{$desktop} {
+    font-size: 1.3em;
+    margin-right: 38%;
+  }
+}
