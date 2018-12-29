@@ -80,6 +80,7 @@
         color: $button-primary-color;
         font-size: calc(4vw + 4vh);
         user-select: none;
+        transition: 0.15s linear;
         &:hover {
           cursor: pointer;
           transform: scale(1.2);

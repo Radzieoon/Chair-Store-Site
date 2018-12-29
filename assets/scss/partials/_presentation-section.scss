@@ -27,6 +27,13 @@
         font-size: 1.3em;
       }
     }
+    .title {
+      margin-left: 1em;
+      @media #{$desktop} {
+        font-size: 1.3em;
+        margin-right: 38%;
+      }
+    }
   }
   //div#clairChair {
   //  background-image: url("../images/box1_img.jpg");
@@ -41,6 +48,9 @@
     position: absolute;
     transition: 0.5s opacity linear;
     width: 100%;
+    &:hover {
+      opacity: 0;
+    }
     h3 {
       @include title(inherit, $border-primary-color, 1em 50% 1.5em 1em);
       @media #{$desktop} {

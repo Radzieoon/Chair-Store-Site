@@ -123,9 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
     /******************************************************************/
-    //---Image title fade
+    //---Image title fade --- executed with CSS only
     //var chairTitle = document.getElementsByClassName('chairTitle');
-    var chairTitle = document.querySelectorAll('.chairTitle');
+/*    var chairTitle = document.querySelectorAll('.chairTitle');
     //console.log(chairTitle);
     chairTitle.forEach(function(element) {
         element.addEventListener('mouseenter', opacityTurnOff)
@@ -136,6 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function opacityTurnOn() {
         this.style.opacity = 1;
-    }
+    }*/
 
 });

@@ -1,0 +1,153 @@
+#pricingSection {
+  background-color: $pricing-section-main-background-color;
+  &>div.container {
+    flex-flow: column nowrap;
+    &>div:first-of-type {
+      width: 100%;
+      .title {
+        font-size: 1.3em;
+        color: $title-darker-color;
+      }
+    }
+    ul#plans {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      list-style: none;
+      @media #{$tablet-up} {
+
+      }
+      &>li {
+        background-color: $pricing-plans-main-second-color;
+        border: 2px solid $wrap-primary-color;
+        display: flex;
+        flex-flow: column nowrap;
+        //justify-content: center;
+        margin: 2em 1em;
+        min-width: 320px;
+        text-align: center;
+        position: relative;
+        @media #{$desktop} {
+          font-size: 1.5em;
+          min-width: 400px;
+        }
+        span.circle-outer {
+          background-color: $pricing-plans-main-second-color;
+          border: 2px solid $wrap-primary-color;
+          border-radius: 50%;
+          display: block;
+          height: 3.5em;
+          left: calc(50% - 1.75em);
+          position: absolute;
+          top: -2.5em;
+          width: 3.5em;
+        }
+        span.circle-inner {
+          background-color: $text-faded-color;
+          border: 2px solid $text-faded-color;
+          border-radius: 50%;
+          display: block;
+          height: 2em;
+          left: calc(50% - 1em);
+          position: absolute;
+          top: -1.75em;
+          width: 2em;
+        }
+        h3 {
+          color: $pricing-plans-main-color;
+          font-size: 1.5em;
+          font-weight: 400;
+          margin-top: 1.2em;
+          text-transform: uppercase;
+        }
+        div.price {
+          align-items: center;
+          border: 2px solid $text-faded-color;
+          border-radius: 50%;
+          color: $text-faded-color;
+          display: flex;
+          flex-flow: column nowrap;
+          height: 7em;
+          justify-content: space-evenly;
+          margin: 1em auto;
+          width: 7em;
+          span {
+            display: block;
+            &:first-of-type {
+              font-size: 2em;
+              font-weight: 700;
+            }
+            &:last-of-type {
+              font-size: 1em;
+            }
+          }
+        }
+        ul.benefits {
+          font-size: 1.2em;
+          list-style: none;
+          margin: 1em 0 4em 0;
+          li {
+            padding: 0.5em 0;
+          }
+          li:nth-child(odd) {
+            background-color: $pricing-plans-detail-background-color;
+            color: $title-lighter-color;
+          }
+          li:nth-child(even) {
+            background-color: $pricing-section-main-background-color;
+            color: $title-darker-color;
+          }
+        }
+        a {
+          @include button($button-primary-color,$button-secondary-color,1em);
+          bottom: 0.8em;
+          left: calc(50% - 4.7em);
+          //margin: 1em 0;
+          position: absolute;
+          @media #{$tablet-up} {
+            left: calc(50% - 3.3em);
+          }
+        }
+        &:hover {
+          background-color: $pricing-plans-main-color;
+          border-color: $pricing-plans-main-color;
+          transition: 0.2s linear;
+          span.circle-outer {
+            background-color: $pricing-plans-main-color;
+            border-color: $pricing-plans-main-color;
+          }
+          span.circle-inner {
+            background-color: $pricing-plans-main-second-color;
+            border-color: $pricing-plans-main-second-color;
+          }
+          h3 {
+            color: $pricing-plans-main-second-color;
+          }
+          div.price {
+            background-color: $pricing-plans-main-second-color;
+            border-color: $pricing-plans-main-second-color;
+            span {
+              color: $pricing-plans-main-color;
+            }
+          }
+          ul.benefits {
+            li:nth-child(odd) {
+              background-color: $pricing-plans-main-second-color;
+            }
+            li:nth-child(even) {
+              color: $title-lighter-color;
+            }
+          }
+          a {
+            background-color: $pricing-plans-main-second-color;
+            color: $pricing-plans-main-color;
+            transition: 0.3s linear;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

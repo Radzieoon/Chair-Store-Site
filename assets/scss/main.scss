@@ -1,11 +1,10 @@
+@import "modules/reset";
 @import "modules/fonts";
 @import "modules/colors";
-@import "modules/reset";
-@import "modules/media-queries";
 @import "modules/mixins";
+@import "modules/media-queries";
 @import "partials/base";
 @import "partials/header";
 @import "partials/intro-section";
 @import "partials/presentation-section";
-//@import "partials/second-section";
-//@import "partials/third-section";
+@import "partials/pricing-section";
